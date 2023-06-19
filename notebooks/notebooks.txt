@@ -1,0 +1,2 @@
+Notebooks de jupyter, Estos notebook deben llamar a los codigos en src o eventualmente estos deberan ser transformados a formato py.
+Tal vez este notebook deberia estar dentro de la carpeta scr y no acá.
