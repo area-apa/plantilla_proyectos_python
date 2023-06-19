@@ -8,7 +8,7 @@
 │     
 ├── docs                                  __Cualquie cosa__  
 ├── models/artefactos                     __Modelos entrenados o serializados, predicciones__  
-├── notebooks                             __Notebooks de jupyter, Estos notebook deben llamar a los codigos en src o eventualmente estos deberan ser transformados a formato py__    
+├── notebooks                             __Notebooks de jupyter,deben llamar a los codigos en src o ser transformados a formato py__    
 ├── README.md                             __Debe tener la info relevante del proyecto__      
 ├── references                            __Diccionario de datos, manuales, y cualquier otro material explicativo__  
 ├── reports                               __análisis generados como pdf, html, latex, etc__  
@@ -18,7 +18,7 @@
 │   ├── data                              __Scripts para descargar o generar datos__    
 │   │   ├── __init__.py   
 │   │   └── make_dataset.py    
-│   ├── features                          __Scripts para convertir la data cruda a datos para el modelo (reemplazo de enulos, etc)__   
+│   ├── features                          __Scripts para convertir la data cruda a datos para el modelo__   
 │   │   ├── build_features.py   
 │   │   └── __init__.py   
 │   ├── __init__.py  
