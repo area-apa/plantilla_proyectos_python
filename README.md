@@ -1,5 +1,10 @@
 # plantilla_proyectos_python
 
+La esctrutura de proyectos debería ser la siguuiente:
+(además en cada carpeta dejé un archivo txt q explica el contenido que debe llevar la carpeta)
+
+## Recuerden que se aceptan sugerencias de todo tipo...respecto a la estructura de carpetas
+
 ├── data  
 │   ├── external                          __Data de fuentes de 3eras partes__  
 │   ├── interim                           __Datos intermedios que han sido transformados__  
