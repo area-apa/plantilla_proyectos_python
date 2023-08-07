@@ -13,13 +13,13 @@ La esctrutura de proyectos debería ser la siguuiente:
 │     
 ├── docs                                  __Cualquie cosa__  
 ├── models/artefactos                     __Modelos entrenados o serializados, predicciones__  
-├── notebooks                             __Notebooks de jupyter,deben llamar a los codigos en src o ser transformados a formato py__    
 ├── README.md                             __Debe tener la info relevante del proyecto__      
 ├── references                            __Diccionario de datos, manuales, y cualquier otro material explicativo__  
 ├── reports                               __análisis generados como pdf, html, latex, etc__  
 │   └── figures                           __Gráficas generadas a hacer usados en los reportes__  
 ├── requirements.txt                      __lista de paquetes requeridos para reproducir el entorno, pip freeze > requirements.txt__  
 ├── src                                   __CODIGO FUENTE DEL PROYECTO__  
+├── notebooks                             __Notebooks de jupyter,deben llamar a los codigos en src o ser transformados a formato py__    
 │   ├── data                              __Scripts para descargar o generar datos__    
 │   │   ├── __init__.py   
 │   │   └── make_dataset.py    
