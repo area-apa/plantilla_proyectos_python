@@ -60,8 +60,8 @@ Breve reseña de lo que deben hacer las implementaciones no mencionadas en el ap
 ***
 Se debe explicitar alguna sugerencia que no llegó a ser implementada o especificar quese pretende incluir en una eventual etapa siguiente.
 
-# plantilla_proyectos_python
-
+## plantilla_proyectos_python
+***
 La esctrutura de proyectos debería ser la siguuiente:
 (además en cada carpeta dejé un archivo txt q explica el contenido que debe llevar la carpeta)
 
