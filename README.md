@@ -8,6 +8,7 @@
 7. [Explicacion](#Explicacion)
 8. [Sugerencias y pasos siguientes](#Sugerencias)
 9. [Estructura de carpetas](#plantilla_proyectos_python)
+10. [Estructura de tablas y rutas](#Estructura_rutas_tablas)
 ### General Info
 ***
 acá se debe escribir una breve reseña del proyecto, que es lo que hace y su salida
@@ -65,6 +66,8 @@ Se debe explicitar alguna sugerencia que no llegó a ser implementada o especifi
 La esctrutura de proyectos debería ser la siguuiente:
 (además en cada carpeta dejé un archivo txt q explica el contenido que debe llevar la carpeta)
 
+**notar que el proyecto en CML debe tener la escructura de nombre {identificador}_{proyecto} por ejemplo lr-629_identificacion_acteco**
+
 ### Recuerden que se aceptan sugerencias de todo tipo...respecto a la estructura de carpetas
 
 ├── data  
@@ -101,3 +104,41 @@ La esctrutura de proyectos debería ser la siguuiente:
 │       ├── mainInferencia.py            
 │       
 ├── test_environment.py                 __aplica en caso de querer hacer test unitarios__
+
+
+## Estructura_rutas_tablas
+***
+
+Lo que se busca es que todas vez que se tenga una salida intermedia importante desde el punto de vista del peso o la cantidad de tablas, esta se disponibilice en una tabla hive (se almacene en azure) para permitir su posterior observacion. Dicho esto, la ubicación de las mencionadas salidas deberá seguir el siguiente creiterio de ubicacion.
+
+abfs://data@datalakesii.dfs.core.windows.net/DatosOrigen/{identificador}/{nombre_proyecto}/intemedia/{nombre_tabla}
+y su ubicación desde el punto de vista de hive debería ser el siguiente
+{namespace}.{nombre_tabla}
+
+en el caso que sea una tabla final (resultado del modelo, por ejemplo una nomina) esta debe quedar en la siguiente ruta
+
+abfs://data@datalakesii.dfs.core.windows.net/DatosOrigen/{identificador}/{nombre_proyecto}/final/{nombre_tabla}
+y su ubicación desde el punto de vista de hive debería ser el siguiente
+{namespace}.{nombre_tabla}
+
+por ejemplo
+
+abfs://data@datalakesii.dfs.core.windows.net/DatosOrigen/lr-629/identificacion_acteco/intermedia/tabla_intermedia
+donde 
+
+**lr-629** es el identificador del proyecto, licitacion, convenio marco etc
+
+**identificacion_acteco** Nombre del proyecto
+
+**tabla_intermedia**: Nombre de la tabla
+luego, desde el punto de vista de hive esta debe almacenarse en:
+
+{namespace}.{nombre_tabla}
+
+A modo de ejemplo el código que podría implementar lo anterior es:
+
+miDataFrame.write.mode('overwrite').option("path", "abfs://data@datalakesii.dfs.core.windows.net/DatosOrigen/lr-629/identificacion_acteco/intermedia/tabla_intermedia).saveAsTable("apa_temp.tabla_intermedia")
+
+
+
+
