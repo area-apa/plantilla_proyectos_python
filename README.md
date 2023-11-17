@@ -139,6 +139,10 @@ A modo de ejemplo el código que podría implementar lo anterior es:
 
 miDataFrame.write.mode('overwrite').option("path", "abfs://data@datalakesii.dfs.core.windows.net/DatosOrigen/lr-629/identificacion_acteco/intermedia/tabla_intermedia).saveAsTable("apa_temp.tabla_intermedia")
 
+miDataFrame.write.mode('overwrite').option("path", "abfs://data@datalakesii.dfs.core.windows.net/DatosOrigen/lr-629/identificacion_acteco/final/tabla_intermedia).saveAsTable("apa_temp.tabla_final")
+
+**la solicitud de carpetas debe hacerse a la persona encaragada del proyecto por parte del SII**
+
 
 
 
